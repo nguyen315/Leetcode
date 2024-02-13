@@ -1,12 +1,11 @@
 function firstPalindrome(words: string[]): string {
     function isPalindrome(s: string): boolean {
-        let i = 0, j = s.length - 1;
-        while (i < j) {
-            if (s[i] !== s[j]) {
+        let i = 0;
+        while (i < s.length - 1 - i) {
+            if (s[i] !== s[s.length - 1 - i]) {
                 return false;
             }
             i++;
-            j--;
         }
         return true;
     }
